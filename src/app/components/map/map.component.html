@@ -1,0 +1,28 @@
+<div #container class="main-container">
+    <ng-container>
+        <div class="my-column" *ngIf="selectedLocation">
+            <app-column [selectedLocation]="selectedLocation"></app-column>
+        </div>
+    </ng-container>
+    <google-map
+        [ngClass]="selectedLocation ? 'location-selected' : ''"
+        height="500px"
+        width="100%"
+        #myMap
+        [center]="center"
+        [zoom]="zoom">
+        <map-marker
+            #selectedMarker="mapMarker"
+            *ngFor="let marker of markers"
+            [position]="marker.coordinates"
+            [label]="marker.name"
+            [title]="marker.name"
+            (mapClick)="openInfo(selectedMarker)"
+        >
+    </map-marker>
+
+    <map-info-window (closeclick)="onMarkerClose()">
+        <span *ngIf="selectedLocation"> {{ selectedLocation.name }} </span>
+    </map-info-window>
+    </google-map>
+</div>

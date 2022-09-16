@@ -1,0 +1,10 @@
+<div>
+  <nav>
+    <div><a routerLink="/map" [ngClass]="currentUrl === '/map' ? 'selected-url nav-wrapper__link' : 'nav-wrapper__link'">map page</a></div>
+    <div><a routerLink="/table" [ngClass]="currentUrl === '/table'? 'selected-url nav-wrapper__link' : 'nav-wrapper__link'">table page</a></div>
+  </nav>
+  <div class="app-wrapper">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+

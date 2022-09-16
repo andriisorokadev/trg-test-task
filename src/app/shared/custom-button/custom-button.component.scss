@@ -1,0 +1,13 @@
+.custom-button {
+    display: block;
+    background-color: lightgray;
+    border: 2px solid gray;
+    transition: 0.25s;
+
+    &:hover {
+        cursor: pointer;
+        color: aliceblue;
+        background-color: #019fb6;
+        box-shadow: 1px 1px gray;
+    }
+}

@@ -1,0 +1,10 @@
+<div class="column" *ngIf="selectedLocation">
+    <div> {{ selectedLocation.name }} </div>
+    <div>
+        coordinates:
+        <ul>
+            <li>latitude: {{ selectedLocation.coordinates.lat }} </li>
+            <li>longitude: {{ selectedLocation.coordinates.lng }} </li>
+        </ul>
+    </div>
+</div>

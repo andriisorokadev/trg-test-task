@@ -1,0 +1,30 @@
+.table-wrapper {
+
+    &__add-location {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row-reverse;
+
+        & > button {
+            background-color: lightgray;
+            border: 2px solid gray;
+            padding: 10px;
+            transition: 0.25s;
+
+            &:hover {
+                cursor: pointer;
+                color: aliceblue;
+                background-color: #019fb6;
+                box-shadow: 1px 1px gray;
+            }
+        }
+    }
+}
+
+table {
+    width: 100%;
+}
+
+th.mat-sort-header-sorted {
+    color: black;
+}

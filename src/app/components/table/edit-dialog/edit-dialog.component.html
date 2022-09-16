@@ -1,0 +1,9 @@
+<app-dialog-window (onClose)="close()" (onConfirm)="confirm()">
+    <input [value]="data.element.name" type="text" (change)="onChange('name', $event)">
+    <div> 
+        <span> Cordinates </span>
+        <br>
+        <input [value]="data.element.coordinates.lat" type="number" (change)="onChange('lat', $event)">
+        <input [value]="data.element.coordinates.lng" type="number" (change)="onChange('lng', $event)">
+    </div>
+</app-dialog-window>

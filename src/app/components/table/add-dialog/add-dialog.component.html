@@ -1,0 +1,11 @@
+<app-dialog-window (onClose)="close()" (onConfirm)="confirm()" [isButtonConfirmDisabled]="isButtonConfirmDisabled">
+    <label for="new-location-name" >location name</label>
+    <br>
+    <input id="new-location-name" type="text" (keyup)="onChange('name', $event)">
+    <div> 
+        <span> cordinates </span>
+        <br>
+        <input type="number" (keyup)="onChange('lat', $event)">
+        <input type="nuber" (keyup)="onChange('lng', $event)">
+    </div>
+</app-dialog-window>
